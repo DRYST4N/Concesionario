@@ -3,8 +3,6 @@ import java.io.Serializable;
 public class Cliente implements Serializable {
     private String ID; //DNI o NIE
     private String Nombre;
-
-
     private int Telefono;
     private boolean Info;
     public Cliente(String ID, String Nombre, int Telefono, boolean Info) {
