@@ -9,8 +9,8 @@ public class Llantas extends DecoradorCoche{
     }
 
     @Override
-    public void MostrarInfo() {
-        super.MostrarInfo();
+    public void mostrarInfo() {
+        super.mostrarInfo();
         System.out.println("Mejora: Llantas de aleacion(5%)");
     }
 }

@@ -1,4 +1,4 @@
 public interface CocheInterface {
-    double precio();
-    void MostrarInfo();
+   public double precio();
+   public void mostrarInfo();
 }

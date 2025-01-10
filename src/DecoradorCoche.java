@@ -6,8 +6,8 @@ abstract class DecoradorCoche implements CocheInterface{
     public double precio(){
         return coche.precio();
     }
-    public void MostrarInfo(){
-        coche.MostrarInfo();
+    public void mostrarInfo(){
+        coche.mostrarInfo();
     }
 
 }

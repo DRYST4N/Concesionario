@@ -5,8 +5,8 @@ class GPS extends DecoradorCoche {
     public double precio(){
         return super.precio() * 1.01;
     }
-    public void MostrarInfo(){
-        super.MostrarInfo();
+    public void mostrarInfo(){
+        super.mostrarInfo();
         System.out.println("Mejora: GPS (1%)");
     }
 

@@ -5,8 +5,8 @@ class Tapiceria_Cuero extends  DecoradorCoche{
     public double precio(){
         return super.precio()*1.10;
     }
-    public void MostrarInfo(){
-        super.MostrarInfo();
+    public void mostrarInfo(){
+        super.mostrarInfo();
         System.out.println("Mejora: Tapiceria de cuero (10%).");
     }
 }

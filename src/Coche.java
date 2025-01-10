@@ -16,7 +16,7 @@ public class Coche implements CocheInterface {
     }
 
     @Override
-    public void MostrarInfo() {
+    public void mostrarInfo() {
         System.out.println("ID: " + ID);
         System.out.println("Precio: " + precio);
         System.out.println("Stock: " + stock);
