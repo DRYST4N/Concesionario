@@ -1,24 +1,40 @@
 public class Coche implements CocheInterface {
-    private String ID; // Es el modelo + el año de fabricacion.
+
+    //Atributos
+    private String id; // Es el modelo + el año de fabricacion.
     private float precio;
     private int stock;
-    public Coche(String ID, float precio, int stock) {
-        this.ID = ID;
+    private String matricula;
+    private String id_seccion;
+
+
+    //Constructor
+    public Coche(String id, float precio, int stock) {
+        this.id = id;
         this.precio = precio;
         this.stock = stock;
     }
-    public String getID() {return ID;}
 
+    //Metodos
+
+    @Override
+    public void mostrarInfo() {
+        System.out.println("ID: " + id);
+        System.out.println("Precio: " + precio);
+        System.out.println("Stock: " + stock);
+        System.out.println("Matricula: " + matricula);
+    }
 
     @Override
     public double precio() {
         return precio;
     }
 
-    @Override
-    public void mostrarInfo() {
-        System.out.println("ID: " + ID);
-        System.out.println("Precio: " + precio);
-        System.out.println("Stock: " + stock);
+
+    public String getID() {return id;}
+
+
+    public void setMatricula(String matricula) {
+        this.matricula = matricula;
     }
 }

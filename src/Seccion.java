@@ -1,9 +1,16 @@
 public class Seccion {
-    private String ID; //Nombre que se le pone a la seccion
-    private String Descripcion; //Breve descripcion de la seccion
-    public Seccion(String ID, String Descripcion) {
-        this.ID = ID;
-        this.Descripcion = Descripcion;
+
+    //Atributos
+    private String id; //Nombre que se le pone a la seccion
+    private String descripcion; //Breve descripcion de la seccion
+
+
+    //Constructor
+    public Seccion(String id, String descripcion) {
+        this.id = id;
+        this.descripcion = descripcion;
     }
+
+
 
 }
