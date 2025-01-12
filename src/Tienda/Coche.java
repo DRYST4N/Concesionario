@@ -7,7 +7,7 @@ public class Coche implements CocheInterface {
     private float precio;
     private int stock;
     private String matricula;
-    private String id_seccion;
+
 
 
     //Constructor
@@ -38,5 +38,8 @@ public class Coche implements CocheInterface {
 
     public void setMatricula(String matricula) {
         this.matricula = matricula;
+    }
+    public void setStock(int stock) {
+        this.stock = stock;
     }
 }

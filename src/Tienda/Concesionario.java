@@ -9,13 +9,11 @@ import java.util.ArrayList;
 public class Concesionario implements Serializable {
     private static Concesionario tienda;
     private ArrayList<Seccion> Secciones;
-    private ArrayList<Coche> Coches;
     private ArrayList<Cliente> Clientes;
     private  ArrayList<Venta> Ventas;
 
     private Concesionario() {
         Secciones = new ArrayList();
-        Coches = new ArrayList();
         Clientes = new ArrayList();
         Ventas = new ArrayList();
     }
@@ -70,6 +68,29 @@ public class Concesionario implements Serializable {
                 c.MostrarInfo();
                 i = i + 1;
             }
+        }
+    }
+
+    //Desde aqui se implementaran los metodos que tienen que ver con las Secciones
+    public void agregarSeccion(Seccion s){
+        Secciones.add(s);
+    }
+    public Seccion recuperarSeccion(String id){
+        for(Seccion s: Secciones) {
+            if(s.getId().equals(id)) {
+                return s;
+            }
+        }return null;
+    }
+    public void eliminarSeccion(Seccion s){
+        Secciones.remove(s);
+    }
+    public void ListarSecciones(){
+        for (Seccion s: Secciones) {
+            int i = 1;
+            System.out.println(i + " - ");
+            s.MostrarInfo();
+            i = i + 1;
         }
     }
 }

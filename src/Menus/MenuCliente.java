@@ -18,6 +18,9 @@ public class MenuCliente extends Menu{
             int info = MyInPut.readInt();
             c = new Cliente(id, nombre, telefono, getInfo(info));
             getConcesionario().anadirClientes(c);
+        }else{
+            System.out.println("El cliente ya existe en el sistema.");
+            System.out.println("Vuelva a intentarlo.");
         }
     }
     public boolean getInfo(int info){
