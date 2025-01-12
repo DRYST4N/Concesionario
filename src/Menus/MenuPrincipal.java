@@ -10,7 +10,7 @@ public class MenuPrincipal extends Menu{
         Menus.add(new MenuCliente(c));
         Menus.add(new MenuCoche(c));
         Menus.add(new MenuSecciones(c));
-        Menus.add(new MenuVenta(c));
+        //Menus.add(new MenuVenta(c));
     }
     public void opciones(){
         System.out.println("");
@@ -19,7 +19,7 @@ public class MenuPrincipal extends Menu{
         System.out.println("1. Gestion de Secciones.");
         System.out.println("2. Gestion de coches.");
         System.out.println("3. Gestion de ventas.");
-        System.out.println("Gestion de clientes.");
+        System.out.println("4. Gestion de clientes.");
     }
     public String seleccion(String s){
     return  null;
