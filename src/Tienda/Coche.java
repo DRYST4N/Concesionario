@@ -11,10 +11,10 @@ public class Coche implements CocheInterface {
 
 
     //Constructor
-    public Coche(String id, float precio, int stock) {
+    public Coche(String id, float precio) {
         this.id = id;
         this.precio = precio;
-        this.stock = stock;
+        this.stock = 1;
     }
 
     //Metodos

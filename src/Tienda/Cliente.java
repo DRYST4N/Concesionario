@@ -22,4 +22,7 @@ public class Cliente implements Serializable {
         System.out.println("Telefono: " + Telefono);
         System.out.println("Info: " + Info);
     }
+    public boolean getInfo(){
+        return Info;
+    }
 }
