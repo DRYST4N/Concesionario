@@ -1,3 +1,5 @@
+package Tienda;
+
 import java.util.Date;
 
 public class Venta {

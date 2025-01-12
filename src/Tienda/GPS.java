@@ -1,3 +1,5 @@
+package Tienda;
+
 class GPS extends DecoradorCoche {
     public GPS(Coche coche){
         super(coche);

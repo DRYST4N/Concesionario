@@ -1,4 +1,6 @@
-class Tapiceria_Cuero extends  DecoradorCoche{
+package Tienda;
+
+class Tapiceria_Cuero extends DecoradorCoche {
     public Tapiceria_Cuero(Coche coche){
         super(coche);
     }

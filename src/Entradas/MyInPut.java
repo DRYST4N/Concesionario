@@ -1,3 +1,5 @@
+package Entradas;
+
 import java.io.*;
 
 public class MyInPut {

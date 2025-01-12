@@ -1,3 +1,5 @@
+package Tienda;
+
 public class Matricula{
 
     //Atributos

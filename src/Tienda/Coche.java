@@ -1,3 +1,5 @@
+package Tienda;
+
 public class Coche implements CocheInterface {
 
     //Atributos
@@ -22,7 +24,7 @@ public class Coche implements CocheInterface {
         System.out.println("ID: " + id);
         System.out.println("Precio: " + precio);
         System.out.println("Stock: " + stock);
-        System.out.println("Matricula: " + matricula);
+        System.out.println("Tienda.Matricula: " + matricula);
     }
 
     @Override

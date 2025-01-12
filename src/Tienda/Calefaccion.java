@@ -1,4 +1,6 @@
-public class Calefaccion extends DecoradorCoche{
+package Tienda;
+
+public class Calefaccion extends DecoradorCoche {
     public Calefaccion(Coche coche){
         super(coche);
     }

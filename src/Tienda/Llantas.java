@@ -1,4 +1,6 @@
-public class Llantas extends DecoradorCoche{
+package Tienda;
+
+public class Llantas extends DecoradorCoche {
     public Llantas(Coche coche){
         super(coche);
     }
