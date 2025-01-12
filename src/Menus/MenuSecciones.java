@@ -27,7 +27,7 @@ public class MenuSecciones extends Menu{
         System.out.println("Escriba el nombre de la seccion: ");
         String s = MyInPut.readString();
         Seccion se = getConcesionario().recuperarSeccion(s);
-        ArrayList<Coche> coches = se.getCoche();
+        ArrayList<Coche> coches = se.getCoches();
         if (se !=null) {
             if (coches.size() == 0) {
                 getConcesionario().eliminarSeccion(se);

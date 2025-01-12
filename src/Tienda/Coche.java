@@ -4,14 +4,14 @@ public class Coche implements CocheInterface {
 
     //Atributos
     private String id; // Es el modelo + el año de fabricacion.
-    private float precio;
+    private double precio;
     private int stock;
     private String matricula;
 
 
 
     //Constructor
-    public Coche(String id, float precio) {
+    public Coche(String id, double precio) {
         this.id = id;
         this.precio = precio;
         this.stock = 1;

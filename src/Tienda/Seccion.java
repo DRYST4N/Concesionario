@@ -19,9 +19,23 @@ public class Seccion implements Serializable {
     public void agregarCoche(Coche coche) {
         coches.add(coche);
     }
-    public ArrayList<Coche> getCoche() {return coches;}
+    public ArrayList<Coche> getCoches() {return coches;}
     public void MostrarInfo(){
         System.out.println("ID: "+id);
         System.out.println("Descripcion: "+descripcion);
+    }
+    public Coche RecuperarCoche(String id){
+        for (Coche coche : coches) {
+            if(coche.getID().equals(id)){
+                return coche;
+            }
+        }return  null;
+    }
+    public void ListarCoches(){
+        for (Coche coche : coches) {
+            int i = 1;
+            System.out.println(i + "- ");
+            coche.mostrarInfo();
+        }
     }
 }
