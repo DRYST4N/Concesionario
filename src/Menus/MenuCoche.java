@@ -15,6 +15,7 @@ public class MenuCoche extends Menu{
         System.out.println("Introduzca el año del coche: ");
         String ano = MyInPut.readString();
         String id = modelo + "-" + ano;
+        System.out.println("Hola");
         Coche cocheNuevo= getConcesionario().recuperarSeccion(seccion).RecuperarCoche(id);
         if(cocheNuevo == null){
             System.out.println("Introduzca el precio base del coche: ");

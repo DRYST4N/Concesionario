@@ -1,6 +1,8 @@
 package Tienda;
 
-public class Coche implements CocheInterface {
+import java.io.Serializable;
+
+public class Coche implements Serializable {
 
     //Atributos
     private String id; // Es el modelo + el año de fabricacion.
@@ -19,15 +21,13 @@ public class Coche implements CocheInterface {
 
     //Metodos
 
-    @Override
     public void mostrarInfo() {
         System.out.println("ID: " + id);
         System.out.println("Precio: " + precio);
         System.out.println("Stock: " + stock);
-        System.out.println("Tienda.Matricula: " + matricula);
+        System.out.println("Matricula: " + matricula);
     }
 
-    @Override
     public double precio() {
         return precio;
     }

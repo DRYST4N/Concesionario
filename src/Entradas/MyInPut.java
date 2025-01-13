@@ -78,12 +78,13 @@ public class MyInPut {
 
 
 
-    public static <A> void serialize(A a, String nombreFichero) {
-        try {
-            FileOutputStream fos = new FileOutputStream(nombreFichero) ;
-            ObjectOutputStream oos = new ObjectOutputStream(fos) ;
-            oos.writeObject(a) ;
+    public static <A> void serialize(A obj, String nombreFichero) {
+        try (FileOutputStream fos = new FileOutputStream(nombreFichero);
+             ObjectOutputStream oos = new ObjectOutputStream(fos)) {
+            oos.writeObject(obj);
+            System.out.println("Datos guardados en " + nombreFichero);
         } catch (IOException e) {
-            System.err.println("Problem: "+e) ;}
+            System.err.println("Problema al guardar los datos: " + e);
+        }
     }
 }

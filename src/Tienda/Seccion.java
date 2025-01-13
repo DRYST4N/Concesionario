@@ -14,6 +14,7 @@ public class Seccion implements Serializable {
     public Seccion(String id, String descripcion) {
         this.id = id;
         this.descripcion = descripcion;
+        coches = new ArrayList<>();
     }
     public String getId() {return id;}
     public void agregarCoche(Coche coche) {
@@ -36,6 +37,7 @@ public class Seccion implements Serializable {
             int i = 1;
             System.out.println(i + "- ");
             coche.mostrarInfo();
+            i = i + 1;
         }
     }
 }

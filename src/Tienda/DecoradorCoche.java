@@ -1,6 +1,6 @@
 package Tienda;
 
-abstract class DecoradorCoche implements CocheInterface {
+abstract class DecoradorCoche{
     protected Coche coche;
     public DecoradorCoche(Coche coche){
         this.coche = coche;

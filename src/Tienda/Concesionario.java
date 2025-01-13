@@ -1,9 +1,6 @@
 package Tienda;
 
-import java.io.FileInputStream;
-import java.io.IOException;
-import java.io.ObjectInputStream;
-import java.io.Serializable;
+import java.io.*;
 import java.util.ArrayList;
 
 public class Concesionario implements Serializable {
@@ -30,14 +27,17 @@ public class Concesionario implements Serializable {
     //Con este metodo abrimos el fichero yrecuperamos los datos que estaban guardados.
     private static <A> A deserialize(String nombreFichero) {
         try {
-            FileInputStream fis = new FileInputStream(nombreFichero) ;
-            ObjectInputStream iis = new ObjectInputStream(fis) ;
-            return (A) iis.readObject() ;
+            FileInputStream fis = new FileInputStream(nombreFichero);
+            ObjectInputStream iis = new ObjectInputStream(fis);
+            return (A) iis.readObject();
+        } catch (FileNotFoundException e) {
+            System.out.println("El archivo " + nombreFichero + " no existe. Se creará uno nuevo.");
         } catch (IOException e) {
-            System.err.println("Problem: "+e);}
-        catch(ClassNotFoundException e)
-        { System.out.println(e.getMessage()); }
-        return null ;
+            System.err.println("Problema al leer el archivo: " + e);
+        } catch (ClassNotFoundException e) {
+            System.out.println("Clase no encontrada durante la deserialización: " + e.getMessage());
+        }
+        return null;
     }
 
     //Implementaremos las cosas de Clientes
