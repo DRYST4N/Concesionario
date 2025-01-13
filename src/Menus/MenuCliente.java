@@ -87,7 +87,7 @@ public class MenuCliente extends Menu{
      * Este método imprime un conjunto de opciones en la consola, permitiendo al usuario 
      * seleccionar acciones relacionadas con la gestión de clientes, como dar de alta un nuevo cliente, 
      * obtener información de clientes específicos o mostrar información general.
-     * /
+     */
     public void opciones(){
         System.out.println(" ");
         System.out.println("Gestion de clientes");
