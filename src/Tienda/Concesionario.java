@@ -102,8 +102,8 @@ public class Concesionario implements Serializable {
      * para detallar su información.
      */
     public void ListarClientes(){
+        int i = 1;
         for (Cliente c: Clientes) {
-            int i = 1;
             System.out.println(i + " - ");
             c.MostrarInfo();
             i = i + 1;
@@ -118,8 +118,8 @@ public class Concesionario implements Serializable {
      * llama al método {@code MostrarInfo()} de cada cliente que cumple con la condición.
      */
     public void ListarClientesInfo(){
+        int i = 1;
         for (Cliente c: Clientes) {
-            int i = 1;
             if (c.getInfo()){
                 System.out.println(i + ".- ");
                 c.MostrarInfo();
@@ -178,11 +178,11 @@ public class Concesionario implements Serializable {
      * para detallar su información.
      */
     public void ListarSecciones(){
+        int i = 1;
         for (Seccion s: Secciones) {
-            int i = 1;
             System.out.println(i + " - ");
             s.MostrarInfo();
-            i = i + 1;
+            i += 1;
         }
     }
 }

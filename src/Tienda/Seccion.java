@@ -84,8 +84,8 @@ public class Seccion implements Serializable {
      * para detallar su información.
      */
     public void ListarCoches(){
+        int i = 1;
         for (Coche coche : coches) {
-            int i = 1;
             System.out.println(i + "- ");
             coche.mostrarInfo();
             i = i + 1;
