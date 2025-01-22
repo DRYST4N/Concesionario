@@ -185,4 +185,33 @@ public class Concesionario implements Serializable {
             i += 1;
         }
     }
+
+    //Parte de la seccion a ventas
+    public void anadirVentas(Venta v){
+        Ventas.add(v);
+    }
+
+    public int numeroVentas() {
+        return this.Ventas.size();
+    }
+    public String matriculaCoche() {
+        Venta v = Ventas.get(this.numeroVentas()-1);
+        return v.getMatricula();
+    }
+
+    public Venta recuperarVenta(String id) {
+        for (Venta v : Ventas) {
+            if (id.equals(v.getIdVenta())) {
+                return v;
+            }
+        }
+        return null;
+    }
+
+    public void mostarVentas() {
+        for (Venta v: Ventas){
+            v.mostrarInformacion();
+            System.out.println(" ");
+        }
+    }
 }

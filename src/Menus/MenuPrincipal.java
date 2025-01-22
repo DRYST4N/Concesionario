@@ -9,7 +9,7 @@ public class MenuPrincipal extends Menu{
         super(c);
         Menus.add(new MenuSecciones(c));
         Menus.add(new MenuCoche(c));
-        //Menus.add(new MenuVenta(c));
+        Menus.add(new MenuVentas(c));
         Menus.add(new MenuCliente(c));
     }
 

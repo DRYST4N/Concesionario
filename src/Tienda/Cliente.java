@@ -59,4 +59,6 @@ public class Cliente implements Serializable {
     public boolean getInfo(){
         return Info;
     }
+
+    public String getNombre(){return Nombre;}
 }
