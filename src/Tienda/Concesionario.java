@@ -195,8 +195,12 @@ public class Concesionario implements Serializable {
         return this.Ventas.size();
     }
     public String matriculaCoche() {
-        Venta v = Ventas.get(this.numeroVentas()-1);
-        return v.getMatricula();
+        if (numeroVentas() == 0){
+            return null;
+        }else {
+            Venta v = Ventas.get(this.numeroVentas() - 1);
+            return v.getMatricula();
+        }
     }
 
     public Venta recuperarVenta(String id) {

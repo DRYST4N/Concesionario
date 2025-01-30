@@ -41,18 +41,29 @@ public class MenuVentas extends Menu{
                 throw new Exception("No se encontro el cliente");
             }
             System.out.println("¿desea agregar alguna mejora?(s/n)");
-            int num = MyInPut.readInt();
+            String resp = MyInPut.readString();
 
-            if (num == 1) {
-                menuMejoras(c,0);
+            if (resp.equals("s") ) {
+                menuMejoras(c);
             }
+
             String id_venta = generarIdVenta();
-            String matricula = generarMatricula(getConcesionario().matriculaCoche());
+
+            String matriculaAnterior = getConcesionario().matriculaCoche();
+            String matricula;
+            if(matriculaAnterior == null){
+                Matricula generador = new Matricula(0);
+                matricula = generador.generarMatricula();
+            }else {
+                matricula = generarMatricula(matriculaAnterior);
+            }
+
             LocalDate hoy = LocalDate.now();
 
             Venta venta =new Venta(id_venta,cliente,c,matricula,hoy);
 
             getConcesionario().anadirVentas(venta);
+            c.setStock(c.getStock() - 1);
 
         }catch (Exception e) {
             System.out.println( e.getMessage());
@@ -60,13 +71,14 @@ public class MenuVentas extends Menu{
         }
     }
 
-    public void  menuMejoras(Coche c , int num){
-        System.out.println("Elige tipo de mejora (el numero) /n 1.Calefaccion /n 2.GPS /n 3.Llantas /n 4.Tapiceria de cuero");
+    public void  menuMejoras(Coche c){
+        System.out.println("Elige tipo de mejora (el numero):");
+        System.out.println("1.-Calefaccion");
+        System.out.println("2.-GPS");
+        System.out.println("3.-Llantas");
+        System.out.println("4.-Tapiceria de cuero");
         int eleccion = MyInPut.readInt();
-        if (eleccion == num){
-            System.out.println("No se puede añadir la misma mejora");
-        }else{
-            switch (num) {
+        switch (eleccion) {
                 case 1:
                     c= new Calefaccion(c);
                     break;
@@ -82,14 +94,11 @@ public class MenuVentas extends Menu{
                 default:
                     System.out.println("No has elegido ninguna mejora");
             }
+        System.out.println("Quieres Añadir otra mejora:(s/n)");
+        String respuesta = MyInPut.readString();
+        if(respuesta.equals("s")){
+            menuMejoras(c);
         }
-        System.out.println("Quieres Añadir otra mejora: (1 si ,0 no)");
-        num = MyInPut.readInt();
-        if(num==1){
-            menuMejoras(c,eleccion);
-        }
-
-
     }
 
     /**
@@ -99,8 +108,8 @@ public class MenuVentas extends Menu{
      */
     public String generarMatricula(String matriculaAnterior) {
         // Validar la matrícula anterior
-        if (matriculaAnterior == null || !matriculaAnterior.matches("\\d{4} [BCDFGHJKLMNPRSTVWXYZ]{3}")) {
-            throw new IllegalArgumentException("Formato de matrícula inválido.");
+        if (matriculaAnterior == null) {
+            return "0000 BBB";
         }
 
         // Letras permitidas en las matrículas españolas
