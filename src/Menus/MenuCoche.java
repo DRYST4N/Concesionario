@@ -2,6 +2,7 @@ package Menus;
 
 import Entradas.MyInPut;
 import Tienda.Coche;
+import Tienda.Cochebase;
 import Tienda.Concesionario;
 import Tienda.Seccion;
 
@@ -42,7 +43,7 @@ public class MenuCoche extends Menu{
         if(cocheNuevo == null){
             System.out.println("Introduzca el precio base del coche: ");
             double precioBase = MyInPut.readDouble();
-            cocheNuevo = new Coche(id, precioBase);
+            cocheNuevo = new Cochebase(id, precioBase);
             Seccion categoria = getConcesionario().recuperarSeccion(seccion);
             categoria.agregarCoche(cocheNuevo);
         }else{
