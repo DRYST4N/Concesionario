@@ -70,7 +70,7 @@ public class Seccion implements Serializable {
      */
     public Coche RecuperarCoche(String id){
         for (Coche coche : coches) {
-            if(coche.getID().equals(id)){
+            if(coche.getId().equals(id)){
                 return coche;
             }
         }return  null;
