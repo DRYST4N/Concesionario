@@ -40,7 +40,7 @@ public class MenuVentas extends Menu{
             if (cliente == null) {
                 throw new Exception("No se encontro el cliente");
             }
-            System.out.println("Elige si quieres mejora o no (1 si ,0 no):");
+            System.out.println("¿desea agregar alguna mejora?(s/n)");
             int num = MyInPut.readInt();
 
             if (num == 1) {
@@ -174,6 +174,9 @@ public class MenuVentas extends Menu{
                 getConcesionario().mostarVentas();
                 return "s";
             }
+            case "0": {
+                return "n";
+            }
         }return "";
     }
 
@@ -181,7 +184,7 @@ public class MenuVentas extends Menu{
     @Override
     public void opciones() {
         System.out.println(" ");
-        System.out.println("Gestion de clientes");
+        System.out.println("Gestion de Ventas");
         System.out.println("Seleccione una opcion: ");
         System.out.println("1. Registrar una Venta.");
         System.out.println("2. Mostrar Informacion de un venta concreta.");

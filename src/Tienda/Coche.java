@@ -2,7 +2,7 @@ package Tienda;
 
 import java.io.Serializable;
 
-public abstract class Coche  {
+public abstract class Coche implements Serializable {
 
     //Atributos
     private String id; // Es el modelo + el año de fabricacion.

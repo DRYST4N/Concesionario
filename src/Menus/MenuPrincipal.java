@@ -25,7 +25,7 @@ public class MenuPrincipal extends Menu{
         System.out.println("0.- Salir del programa.");
         System.out.println("1. Gestion de Secciones.");
         System.out.println("2. Gestion de coches.");
-        //System.out.println("3. Gestion de ventas.");
+        System.out.println("3. Gestion de ventas.");
         System.out.println("4. Gestion de clientes.");
     }
 
